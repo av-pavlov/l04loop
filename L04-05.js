@@ -1,5 +1,5 @@
-function checkCardNumber(nstr) {
-    // проверка номера кредитной карты
+function expDiff(nstr) {
+    // модуль разности между стандартной экспонентой и приближением в виде ряда
 }
 
-module.exports = checkCardNumber;
+module.exports = expDiff;
