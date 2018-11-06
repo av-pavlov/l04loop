@@ -1,5 +1,7 @@
-var i=0 ;
-do {
-	var g = asd;
-	console.log(g) ;
-} while (g!=0) ;
+function pyramid(n) {
+	var res = "#" ;
+	return res ; 
+}
+
+module.exports = pyramid;
+
