@@ -1,14 +1,12 @@
-var S = 0;
-var inputNumber = -1;
-var k = 0;
-
-function MedSum() {
-	while (inputNumber !== 0) {
-		inputNumber = parseFloat(prompt());
-		k++;
-		if (inputNumber > 0)
-			S += parseFloat(inputNumber);
-		if (k == 0) return (0);
-		if (inputNumber == 0) return (S / (k-1));
+function pyramid(n) {
+	var result = '';
+	for (i=0;i<n;i++) {
+		for (j=0;j<i;j++) {
+			result += '#';
+		}
+		result += "\n";
 	}
+	return(result);
 }
+
+module.exports = pyramid;
