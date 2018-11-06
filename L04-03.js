@@ -1,25 +1,26 @@
-<<<<<<< HEAD
 function pyramid(n) {
-	var res = "#";
-	// напишите код, обратите внимание, что пробелы 
-	// должны быть в начале строки, но не в конце
-
+	var res = "";
+	var spaceCount = 0;
+	var sharpCount = 0;
+	for (i=1;i<=n;i++) {
+			for (j=1;j<n-i+2*i;j++) {
+				if (spaceCount < n-i) {
+					res += ' ';
+					spaceCount++;
+				}
+				else
+					if (sharpCount < 2*i-1) {
+						res += '#';
+						sharpCount++;
+					}
+				if (spaceCount == n-i && sharpCount == 2*i-1) {
+					res += '\n';
+					spaceCount = 0;
+					sharpCount = 0;
+				}
+			}
+	}
 	return res;
 }
 
 module.exports = pyramid;
-	
-=======
-function pyramid(n) {
-	var result = '';
-	for (i=0;i<n;i++) {
-		for (j=0;j<=i;j++) {
-			result += '#';
-		}
-		result += "\n";
-	}
-	return(result);
-}
-
-module.exports = pyramid;
->>>>>>> be8730a2635f42f636ba5d394d200737d7d44e98

@@ -3,7 +3,7 @@
 const assert = require('assert');
 const fs = require('fs');
 
-describe('ЗАДАЧА 3', function(){
+describe('Задача 3', function(){
 	var code;
 
 	it('файл существует ', function(){
@@ -27,8 +27,13 @@ describe('ЗАДАЧА 3', function(){
 		assert.strictEqual(
 			pyramid(2).trimRight(), " #\n###", "ошибка при n=2");
 	})
-
-	it('верно при n=2', function(){
+	
+	it('верно при n=3', function(){
+		assert.strictEqual(
+			pyramid(3).trimRight(), "  #\n ###\n#####", "ошибка при n=3");
+	})
+	
+	it('верно при n=20', function(){
 		var n = 20;
 		assert.strictEqual(
 			pyramid(n).trimRight().length, n*(3*n+1)/2 - 1,
