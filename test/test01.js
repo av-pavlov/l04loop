@@ -3,7 +3,7 @@ const fs = require('fs')
 const execSync = require('child_process').execSync
 
 
-describe('ЗАДАЧА 1', function(){
+describe('Задача 1', function(){
 	var code;
 
 	it('файл существует ', function(){
@@ -18,12 +18,12 @@ describe('ЗАДАЧА 1', function(){
 
 	it('содержит оператор for', function(){
 		var code = fs.readFileSync('L04-01.js')
-		assert(code['includes']('for'))
+		assert(code['includes']('for'),"Где for? А если найду?")
 	})
 	
 	it('не содержит операторов while', function(){
 		var code = fs.readFileSync('L04-01.js')
-	 	assert(!code.includes('while'))
+	 	assert(!code.includes('while'),"Ты че while вставил?")
 	})
 
 	hello = 'Hello world!\n'
