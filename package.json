@@ -2,8 +2,8 @@
   "name": "04loop",
   "version": "1.0.0",
   "description": "ЛР4: Циклы",
-  "devDependencies" : {
-    "mocha": "^3.1.0"
+  "devDependencies": {
+    "mocha": "^3.5.3"
   },
   "main": "L04-01.js",
   "directories": {
