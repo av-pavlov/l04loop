@@ -1,3 +1,16 @@
 language: node_js
 node_js:
   - "node"
+matrix:
+  include:
+  - name: "ЗАДАЧА 1"
+    env: TEST_SUITE=test01
+  - name: "ЗАДАЧА 2"
+    env: TEST_SUITE=test02
+  - name: "ЗАДАЧА 3"
+    env: TEST_SUITE=test03
+  - name: "ЗАДАЧА 4"
+    env: TEST_SUITE=test04
+  - name: "ЗАДАЧА 5"
+    env: TEST_SUITE=test05
+  script: mocha test/$TEST_SUITE.js
